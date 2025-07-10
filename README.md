@@ -23,7 +23,7 @@ conda activate tailoredit
 ## Dataset
 ![teaser2](assets/teaser2.png)&nbsp;
 
-We constructed a fashion image editing dataset **InstructFashion** for tasks *Addition*, *Removal*, *Replacement*, and *Alteration*, which contains over 40k editing image-text pairs. The original image data comes from [NET-A-PORTER](https://www.net-a-porter.com/).
+We constructed a fashion image editing dataset **InstructFashion** for tasks *Addition*, *Removal*, *Replacement*, and *Alteration*, which contains over 40k editing image-text pairs. The original image data comes from [NET-A-PORTER](https://www.net-a-porter.com/) and [shopbop](https://www.shopbop.com/).
 
 The following existing works were mainly used in the process of building data:
 1. [Inpait-Anything](https://github.com/geekyutao/Inpaint-Anything) is used to remove a specified object that already exists in the image;
