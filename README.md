@@ -47,8 +47,8 @@ There are some model weights need to be download. We suggest you that place all 
 - [x] [parsing_prediction_weight](https://drive.google.com/file/d/1aOxfR3zvJYQbVglcF6la8zxyeLC3ykj_/view?usp=drive_link)
 - [x] [global_gate_weight](https://drive.google.com/file/d/1bj6Qjfc33naYrff1_H9I8aA7cnuE_XHW/view?usp=drive_link)
 - [x] [ip-adapter_sd1.5](https://drive.google.com/file/d/1p6Dtkb-UO0S7Wkj3uzImWp2M3EqXJywE/view?usp=drive_link)
-- [] [tailor_edit_model]()
-- [] [controlnet_model]()
+- [ ] [tailor_edit_model]()
+- [ ] [controlnet_model]()
 
 ### Command
 Inference using python file with arguments,
