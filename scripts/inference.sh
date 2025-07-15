@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0
 
-python inference.py \
+python ./scripts/inference.py \
     --image_path "./examples/1.add the scarf/image.jpg" \
     --parsing_path "./examples/1.add the scarf/parsing.png" \
     --instruction_path "add the scarf." \

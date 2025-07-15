@@ -36,11 +36,27 @@ We express our sincere gratitude for the above work. Our dataset will be made pu
 
 
 ## Training
-Open source training code is included in our plan.
+
+### Stage 1
+In the first stage, the contorlnet for understanding human semantic segmentation maps is required to be finetuned. Running the scripts below, the checkpoint will be saved in ./output.
+```
+bash ./scripts/finetune_controlnet.sh
+```
+
+### Stage 2
+In the second stage, the lora adapters for adapting different editing tasks are required to be trained. Running the scripts below, the checkpoint will be saved in ./output. Remember to set the 'lora_task' you want in the script.
+```
+bash ./scripts/finetune_lora.sh
+```
+
+### Stage 3
+In the last stage, the gap caused by stage one and stage two will be fixed after finetuning, resulting in a unified editing framework. Running the scripts below, the checkpoint will be saved in ./output.
+```
+bash ./scripts/train.sh
+```
 
 
 ## Inference
-
 
 ### Preparation
 There are some model weights need to be download. We suggest you that place all files in "./checkpoints".

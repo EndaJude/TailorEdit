@@ -88,10 +88,14 @@ def init_moe_in_lora(unet: UNet2DConditionModel):
             m.moe_gate = torch.nn.Linear(seq_len * dim * num_experts, num_experts, bias=False)
             m.forward = types.MethodType(forward_moe, m)
 
+def set_unet_weight_requires_grad_(unet: UNet2DConditionModel):
+    for n, p in unet.named_parameters():
+        if "to_k_ip" in n or "to_v_ip" in n:
+            p.requires_grad_(True)
+        p.requires_grad_(True)
+
 def set_unet_weight_requires_grad(unet: UNet2DConditionModel):
     for n, p in unet.named_parameters():
-        # if "to_k_ip" in n or "to_v_ip" in n:
-        #     p.requires_grad_(True)
         if "moe_gate" in n:
             p.requires_grad_(True)
         if any(keyword in n for keyword in ["attn1.to_k", "attn1.to_v", "attn1.to_q", "attn2.to_k", "attn2.to_v", "attn2.to_q"]):

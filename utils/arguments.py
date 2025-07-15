@@ -23,10 +23,9 @@ def parse_args():
         help="Path to pretrained IP-Adapter",
     )
     parser.add_argument(
-        "--pretrained_unet_path",
+        "--lora_task",
         type=str,
-        default="./FashionEdit_lora_chg_augLoRA/checkpoint-10000/UNet2DConditionModel/diffusion_pytorch_model.safetensors",
-        help="Path to pretrained unet model",
+        default="",
     )
     parser.add_argument(
         "--pretrained_controlnet_path",
